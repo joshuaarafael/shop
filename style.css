@@ -1,0 +1,209 @@
+/* Animasi FadeIn */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Gaya untuk body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('img/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease;
+}
+
+/* Blur background */
+.blur-bg::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 0;
+}
+
+/* Login container styling */
+.login-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Box for login form */
+.login-box {
+    background: #ffffffcc;
+    backdrop-filter: blur(4px);
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    animation: fadeInUp 1.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Hover effect for login box */
+.login-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.login-box h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.6em;
+}
+
+.login-box .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Password input wrapper */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: 100%;
+    height: 70px; /* height lebih tinggi */
+    padding: 12px 50px 12px 14px; /* lebih banyak ruang untuk ikon mata */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+/* Toggle password visibility icon */
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+}
+
+/* Button style */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-box button:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+    transform: scale(1.03);
+}
+
+/* Error message styling */
+.error-message {
+    color: #e74c3c; /* merah terang */
+    margin-bottom: 1rem;
+    font-size: 0.95em;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Login success message styling */
+.login-success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #2ecc71;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+    z-index: 1000;
+    font-size: 0.95em;
+}
+
+/* Modal for success login */
+.welcome-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content p {
+    margin: 0 0 20px;
+    font-size: 18px;
+}
+
+#closeModal {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closeModal:hover {
+    background-color: #27ae60;
+}

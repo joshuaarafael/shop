@@ -1,0 +1,249 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('img/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease;
+}
+
+.blur-bg {
+    position: relative;
+    background: url('img/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    z-index: 0; /* Agar tidak mempengaruhi elemen di atasnya */
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #ccc;
+    animation: fadeInDown 1s ease;
+}
+
+.header h1 {
+    font-size: 1.8em;
+    color: #2c3e50;
+}
+
+#logout-btn {
+    padding: 10px 18px;
+    font-size: 0.95em;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#logout-btn:hover {
+    background: linear-gradient(135deg, #e55039, #f7b733);
+    transform: scale(1.05);
+}
+
+/* Container */
+.container {
+    padding: 40px 30px;
+}
+
+/* Box style reused */
+.login-box {
+    background: #ffffffcc;
+    backdrop-filter: blur(4px);
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    animation: fadeInUp 1.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.login-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.login-box h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.6em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+    transform: scale(1.03);
+}
+
+/* Produk */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background: #ffffffcc;
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: fadeInUp 1s ease;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+.product-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.product-card a:hover {
+    color: #0056b3;
+}
+
+/* Animasi tambahan */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menambahkan desain untuk kolom selamat datang */
+.user-profile-box {
+    background-color: #2ecc71; /* Warna hijau terang */
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Lebar 80% dari layar */
+    max-width: 600px; /* Lebar maksimal */
+    margin: 20px auto; /* Menjaga agar berada di tengah */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font style */
+    font-size: 1.5em;
+    animation: fadeInUp 1s ease; /* Efek animasi saat kolom muncul */
+}
+
+.user-profile-box h2 {
+    font-size: 2em; /* Ukuran font lebih besar untuk salam */
+    font-weight: bold;
+}
+
+.user-profile-box p {
+    font-size: 1.2em; /* Ukuran font untuk deskripsi */
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-kembali {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* gradasi oranye */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.btn-kembali:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
