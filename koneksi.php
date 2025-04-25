@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
-$user = "admin"; // Ubah sesuai konfigurasi MySQL kamu
+$user = "admin";
 $pass = "";
 $db = "shop";
 
